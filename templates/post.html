@@ -38,7 +38,7 @@
         <!-- Comments Area -->
         <!-- TODO: Add a CKEditor for commenting below -->
         {{ ckeditor.load() }}
-        {{ ckeditor.config(name='comment_text') }}
+        {{ ckeditor.config(name='comment_text', custom_config='versionCheck: false' ) }}
 
         <form method="post">
           {{ render_form(form, novalidate=True, button_map={"submit": primary}) }}
