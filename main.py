@@ -118,7 +118,7 @@ def register():
                 new_user = User(
                     email=email,
                     name = name,
-                    password = generate_password_hash(password, method="scrypt", salt_length=8)
+                    password = generate_password_hash(password, method="pbkdf2:sha256", salt_length=8)
                 )
                 db.session.add(new_user)
                 db.session.commit()
